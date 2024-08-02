@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costa Rica Field Trip</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Costa Rica Field Trip Interactive Journey 🎀</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#day-by-day">Day-by-Day Experiences</a></li>
+                <li><a href="#wildlife">Wildlife Gallery</a></li>
+                <li><a href="#cultural">Cultural Encounters</a></li>
+                <li><a href="#reflection">Reflection</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+
+
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>Welcome to my interactive journey through Costa Rica! Here, you will find a detailed account of my experiences, the amazing wildlife I encountered, and the cultural insights I gained during my trip.</p>
+        
+        <!-- Interactive Map of Costa Rica -->
+        <h3>Map of Costa Rica</h3>
+        <div id="mapid" style="height: 600px;"></div>
+        
+        <!-- Leaflet CSS and JS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        
+        <!-- JavaScript to initialize the map -->
+        <script>
+            var map = L.map('mapid').setView([9.9333, -84.0833], 6); // Coordinates for Costa Rica
+    
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+    
+            // Define locations with their coordinates and descriptions
+            var locations = [
+                { coords: [8.5326, -83.4928], popup: 'Corcovado National Park: A biodiverse park in southwestern Costa Rica.' },
+                { coords: [9.9937, -84.2079], popup: 'San Jose International Airport: The main international gateway to Costa Rica.' },
+                { coords: [9.9745, -84.2267], popup: 'Hotel Bristol: A luxury hotel in San Jose.' },
+                { coords: [10.1352, -84.4170], popup: 'Britt Coffee Tour: A popular coffee tour in the Central Valley.' },
+                { coords: [9.9351, -84.0347], popup: 'Basilica of Our Lady of Los Angeles: A significant religious site in Cartago.' },
+                { coords: [9.2864, -83.6845], popup: 'Quetzal Sanctuary Retreat: A retreat center near Dota in the Talamanca Mountains.' },
+                { coords: [9.0906, -83.4644], popup: 'Museo Comunitario de Boruca: A community museum in Boruca.' },
+                { coords: [9.3102, -82.7962], popup: 'Site of Stone Spheres: Ancient stone spheres in the Diquís Delta.' },
+                { coords: [8.6271, -83.6246], popup: 'Marisqueria Las Vegas: A seafood restaurant in Sierpe.' },
+                { coords: [8.5495, -83.7164], popup: 'Campanario Biological Station: A research station in Osa Peninsula.' }
+            ];
+    
+            // Add markers to the map
+            locations.forEach(function(location) {
+                L.marker(location.coords).addTo(map)
+                    .bindPopup(location.popup)
+                    .openPopup();
+            });
+        </script>
+    </section>
+    
+    
+    
+
+
+
+
+
+
+
+    <section id="day-by-day">
+        <h2>Day-by-Day Experiences</h2>
+        <div class="pdf-container">
+            <iframe src="/Users/malakhaida/Documents/Costa Rica project <3/COSTA RICA field journal.pdf" width="100%" height="600px" style="border: none;"></iframe>
+        </div>
+    </section>
+    
+
+
+
+
+
+
+    
+    <section id="wildlife" class="section-with-images">
+        <h2>Wildlife Gallery</h2>
+        <div class="image-container">
+            <img src="quetzal.jpg" alt="Resplendent Quetzal">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Resplendent_quetzal" target="_blank">Resplendent Quetzal</a> - A beautiful bird found in Costa Rica's cloud forests. (<i>Pharomachrus mocinno</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="crocodile.jpg" alt="American Crocodile">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/American_crocodile" target="_blank">American Crocodile</a> - Spotted in the rivers and swamps of Costa Rica. (<i>Crocodylus acutus</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="ant.jpg" alt="Leafcutter Ant">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Leafcutter_ant" target="_blank">Leafcutter Ant</a> - Famous for their impressive leaf-cutting skills. (<i>Atta cephalotes</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="bluemorpho.jpg" alt="Blue Morpho Butterfly">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Morpho_menelaus" target="_blank">Blue Morpho Butterfly</a> - Known for its stunning blue wings. (<i>Morpho menelaus</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="brownbasilik.jpg" alt="Brown Basilisk">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Basiliscus_vittatus" target="_blank">Brown Basilisk</a> - Also known as the 'Jesus Christ lizard' for its ability to run on water. (<i>Basiliscus vittatus</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="canetoad.jpg" alt="Cane Toad">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Cane_toad" target="_blank">Cane Toad</a> - An invasive species with a voracious appetite. (<i>Rhinella marina</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="redeyedtreefrog.jpg" alt="Red-Eyed Tree Frog">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Agalychnis_callidryas" target="_blank">Red-Eyed Tree Frog</a> - Iconic for its bright red eyes and colorful body. (<i>Agalychnis callidryas</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="glassfrog.jpg" alt="Glass Frog">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Centrolenidae" target="_blank">Glass Frog</a> - Known for its translucent skin. (<i>Centrolenidae</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="greenandblackfrog.jpg" alt="Green and Black Poison Dart Frog">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Dendrobates_auratus" target="_blank">Green and Black Poison Dart Frog</a> - A small but strikingly beautiful frog. (<i>Dendrobates auratus</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="toucan.jpg" alt="Toucan">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Toucan" target="_blank">Toucan</a> - Recognizable by its large, colorful bill. (<i>Ramphastos toco</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="hermithummingbird.jpg" alt="Hermit Hummingbird">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Hermit_(hummingbird)" target="_blank">Hermit Hummingbird</a> - Tiny and fast, often seen hovering near flowers. (<i>Phaethornithinae</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="scarletrumped.jpg" alt="Scarlet-Rumped Cacique">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Scarlet-rumped_trogon" target="_blank">Scarlet-Rumped Cacique</a> - Known for its bright red rump. (<i>Ramphocelus passerinii</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="howler.jpg" alt="Howler Monkey">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Howler_monkey" target="_blank">Howler Monkey</a> - Famous for its loud howls that can be heard for miles. (<i>Alouatta</i>)</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="white.jpg" alt="White-Faced Capuchin Monkey">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/White-faced_capuchin" target="_blank">White-Faced Capuchin Monkey</a> - A highly intelligent and curious monkey.</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="spider.jpg" alt="Spider Monkey">
+            <div class="overlay">
+                <div class="text"><a href="https://en.wikipedia.org/wiki/Spider_monkey" target="_blank">Spider Monkey</a> - Known for its long limbs and prehensile tail.</div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+    <section id="cultural">
+        <h2>Cultural Encounters</h2>
+        <p>During my trip to Costa Rica, I had the privilege of meeting Margarita's family and learning about their rich cultural heritage. Their traditional crafts and warm hospitality left a lasting impression on me.</p>
+        <button class="ribbon-button" onclick="window.open('http://www.boruca.org/en/crafts/')">Discover Borucan Crafts</button>
+        <p>For more information and content about the Borucan culture, check out their YouTube channel:</p>
+        <button class="ribbon-button" onclick="window.open('https://www.youtube.com/borucacostarica')">Visit Borucan YouTube Channel</button>
+    
+        <h3>Quiz: Test Your Knowledge!</h3>
+        <form id="quiz-form">
+            <p>1. What is the national bird of Costa Rica?</p>
+            <input type="radio" name="q1" value="a"> Scarlet Macaw<br>
+            <input type="radio" name="q1" value="b"> Resplendent Quetzal<br>
+            <input type="radio" name="q1" value="c"> Toucan<br>
+            <br>
+            <p>2. Which Costa Rican animal is known for its ability to run on water?</p>
+            <input type="radio" name="q2" value="a"> Red-Eyed Tree Frog<br>
+            <input type="radio" name="q2" value="b"> Green and Black Poison Dart Frog<br>
+            <input type="radio" name="q2" value="c"> Brown Basilisk<br>
+            <br>
+            <p>3. What unique feature is the Glass Frog known for?</p>
+            <input type="radio" name="q3" value="a"> Bright Red Eyes<br>
+            <input type="radio" name="q3" value="b"> Translucent Skin<br>
+            <input type="radio" name="q3" value="c"> Large Colorful Bill<br>
+            <br>
+            <p>4. What is the Borucan word for their traditional festival celebrating the victory over the Spanish?</p>
+            <input type="radio" id="q4a1" name="q4" value="a">
+            <label for="q4a1">A. Fiesta</label><br>
+            <input type="radio" id="q4a2" name="q4" value="b">
+            <label for="q4a2">B. Juego de los Diablitos</label><br>
+            <input type="radio" id="q4a3" name="q4" value="c">
+            <label for="q4a3">C. Carnaval</label><br>
+            <br>
+            <p>5. What traditional craft are the Borucan people known for?</p>
+            <input type="radio" name="q5" value="a"> Pottery<br>
+            <input type="radio" name="q5" value="b"> Weaving<br>
+            <input type="radio" name="q5" value="c"> Wood Carving<br>
+            <br>
+            <p>6. What kind of material is commonly used in Borucan masks?</p>
+            <input type="radio" id="q6a1" name="q6" value="a">
+            <label for="q6a1">A. Wood</label><br>
+            <input type="radio" id="q6a2" name="q6" value="b">
+            <label for="q6a2">B. Metal</label><br>
+            <input type="radio" id="q6a3" name="q6" value="c">
+            <label for="q6a3">C. Stone</label><br>
+            <br>
+            <button type="button" onclick="checkAnswers()">Submit</button>
+        </form>
+        <p id="quiz-result"></p>
+    </section>
+    
+    
+
+
+
+    <section id="reflection">
+        <h2>Reflection</h2>
+    
+    <!-- Video Embed -->
+    <div class="video-container">
+        
+        <iframe src="video.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <!-- Reflection Text -->
+    <p>The anticipation and excitement were palpable as our journey to Costa Rica began. This trip would create memories that would forever change us.</p>
+    <p>From the very start, Costa Rica felt like a dream. Lush green landscapes and vibrant colors surrounded us, with the rainforest's whispers and the ocean's songs creating a symphony of nature.</p>
+    <p>Our group of friends quickly became family. Every laugh, every shared meal, and every adventure drew us closer together. We forged bonds that would last a lifetime, united by the magic of this beautiful land.</p>
+    <p>We met incredible people whose warmth and generosity left a lasting impression on our hearts. Their stories, their smiles, and their way of life taught us the true meaning of 'La Pura Vida.' It wasn’t just a phrase, but a way of living – appreciating the simple moments, finding joy in the present, and embracing life with open arms.</p>
+    <p>We explored hidden waterfalls, trekked through dense jungles, and stood on pristine beaches, each experience more extraordinary than the last. Every sunset painted the sky with breathtaking colors, reminding us of the beauty in every ending and new beginning.</p>
+    <p>But beyond the adventures, it was the connection with nature that truly touched our souls. In Costa Rica, we found peace. We felt a deep connection to the earth, understanding our place in the grand tapestry of life. The simplicity and purity of our surroundings allowed us to reconnect with our true selves.</p>
+    <p>This journey wasn’t just a trip; it was a transformative experience. We returned home with a renewed perspective, a deeper appreciation for the world around us, and hearts full of cherished memories.</p>
+    <p>This is what 'La Pura Vida' means – living life fully, with love, joy, and gratitude. Costa Rica gave us this gift, and it will remain a part of us forever.</p>
+    <p>As we say our goodbyes, we know that this is not a farewell, but rather a 'see you soon.' We left a piece of our hearts in Costa Rica, and we will carry its spirit with us until we return.</p>
+</section>
+
+    
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you would like to get in touch, feel free to reach out through Instagram or email.</p>
+    <div class="contact-icons">
+        <a href="https://www.instagram.com/its__maluu" target="_blank">
+            <img src="instagram.png" alt="Instagram" class="contact-icon">
+        </a>
+        <a href="mailto:malak.haida@bhcc.edu">
+            <img src="email.png" alt="Email" class="contact-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/malak-haida-8660802a1" target="_blank">
+            <img src="linkedin.png" alt="LinkedIn" class="contact-icon">
+        </a>
+
+    </div>
+</section>
+    
+    <footer>
+        <p>&copy; 2024 Malak. All rights reserved. 🎀</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+<button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
+<script>
+    const topButton = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+
+<style>
+    #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: #ff0084;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    #scrollToTopBtn:hover {
+        background-color: #000;
+    }
+
+
+
+
+
+
+
+</style>
+
+
+
+</html>
+
